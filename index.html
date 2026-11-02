@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-time="day">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mochi's Meadow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- icon set: one consistent rounded line style, colored by the surrounding text color -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3s5.5 4 5.5 9.2a5.5 5.5 0 0 1-11 0c0-2.2 1-3.4 2.2-4.6 0 2 .9 3.2 2 3.2 0-3.2-1-5.2 1.3-7.8z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17h12l-1.5-2v-4a4.5 4.5 0 0 0-9 0v4z"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M7 4h10M7 20h10M8 4c0 5 4 5.5 4 8s-4 3-4 8M16 4c0 5-4 5.5-4 8s4 3 4 8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5C6 4.5 9 4.5 12 6c3-1.5 6-1.5 8-.5V19c-2-1-5-1-8 .5-3-1.5-6-1.5-8-.5z"/><path d="M12 6v13.5"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19c3-4 6-6 9-8"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M7 7v10M17 7v10M4 9.5v5M20 9.5v5M7 12h10"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.6 9.6c-.5-.8-1.4-1.2-2.6-1.2-1.4 0-2.5.8-2.5 1.9s1 1.5 2.5 1.8 2.5.7 2.5 1.8-1.1 1.9-2.5 1.9c-1.2 0-2.1-.4-2.6-1.2M12 6.5v2M12 15.7v2"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L15.5 5.5a2.1 2.1 0 0 1 3 3L8 19z"/><path d="M14 7l3 3"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 12h8l1-12"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 3l3 3-3 3"/><path d="M20 6H8a4 4 0 0 0-4 4v1"/><path d="M7 21l-3-3 3-3"/><path d="M4 18h12a4 4 0 0 0 4-4v-1"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20V11M12 20V4M19 20v-7"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9.5 3h5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M7 17a5 5 0 0 1 10 0M12 5v4M5.6 10.6l1.4 1.4M18.4 10.6L17 12M3 17h2M19 17h2M4 21h16"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5z"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-8M12 13c0-4-3-6-7-6 0 4 3 6 7 6zM12 15c0-3 2-5 6-5 0 3-2 5-6 5z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></symbol>
+    <symbol id="i-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="6" r="2.8"/><circle cx="17.5" cy="10" r="2.8"/><circle cx="15.5" cy="16.5" r="2.8"/><circle cx="8.5" cy="16.5" r="2.8"/><circle cx="6.5" cy="10" r="2.8"/></symbol>
+  </svg>
+
+  <header class="hero">
+    <svg class="scene" viewBox="0 0 1000 380" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <!-- stars (dawn and night) -->
+      <g class="stars" fill="var(--celest)">
+        <circle cx="90" cy="48" r="2"/><circle cx="210" cy="96" r="1.6"/><circle cx="318" cy="38" r="2.2"/><circle cx="402" cy="110" r="1.6"/>
+        <circle cx="478" cy="28" r="1.8"/><circle cx="566" cy="94" r="2"/><circle cx="640" cy="44" r="1.6"/><circle cx="716" cy="120" r="1.8"/>
+        <circle cx="780" cy="60" r="2.2"/><circle cx="932" cy="40" r="1.8"/><circle cx="960" cy="134" r="1.6"/><circle cx="36" cy="132" r="1.8"/>
+        <circle class="tw" cx="262" cy="64" r="2.4"/><circle class="tw d2" cx="610" cy="148" r="2.2"/><circle class="tw d3" cx="860" cy="104" r="2.4"/>
+      </g>
+
+      <!-- sun / moon -->
+      <g class="celest">
+        <circle class="glow" r="86" fill="var(--glow)"/>
+        <g class="sun"><circle r="34" fill="var(--celest)"/></g>
+        <g class="moon"><circle r="32" fill="var(--celest)"/><circle cx="-10" cy="-8" r="6" fill="rgba(80,70,120,.14)"/><circle cx="12" cy="8" r="8" fill="rgba(80,70,120,.12)"/><circle cx="6" cy="-16" r="3.5" fill="rgba(80,70,120,.12)"/></g>
+      </g>
+
+      <!-- clouds -->
+      <g fill="var(--cloud)">
+        <g class="cloud c1"><rect x="130" y="102" width="130" height="28" rx="14"/><circle cx="176" cy="102" r="20"/><circle cx="214" cy="98" r="24"/></g>
+        <g class="cloud c2"><rect x="560" y="66" width="104" height="22" rx="11"/><circle cx="596" cy="66" r="15"/><circle cx="626" cy="63" r="18"/></g>
+        <g class="cloud c3"><rect x="720" y="150" width="84" height="18" rx="9"/><circle cx="748" cy="150" r="12"/><circle cx="772" cy="148" r="14"/></g>
+      </g>
+
+      <!-- far hills with tree and house -->
+      <path d="M0 252C140 208 290 218 420 244S700 258 830 224 940 214 1000 228V380H0Z" fill="var(--hill-far)"/>
+      <g>
+        <rect x="165" y="186" width="10" height="44" rx="4" fill="var(--trunk)"/>
+        <circle cx="170" cy="164" r="34" fill="var(--leaf)"/>
+        <circle cx="146" cy="180" r="20" fill="var(--leaf)"/>
+        <circle cx="196" cy="178" r="22" fill="var(--leaf)"/>
+        <circle cx="160" cy="154" r="14" fill="var(--leaf-2)" opacity=".7"/>
+      </g>
+      <g>
+        <rect x="796" y="196" width="58" height="36" rx="5" fill="var(--house)"/>
+        <path d="M788 200L825 168 862 200z" fill="var(--roof)"/>
+        <rect x="840" y="170" width="9" height="18" rx="2" fill="var(--roof)"/>
+        <path d="M814 232v-16a9 9 0 0 1 18 0v16z" fill="var(--door)"/>
+        <rect x="838" y="208" width="10" height="10" rx="3" fill="var(--window)"/>
+      </g>
+
+      <!-- mid hill -->
+      <path d="M0 290C130 262 270 270 410 288S660 306 800 272 940 262 1000 272V380H0Z" fill="var(--hill-mid)"/>
+
+      <!-- fireflies (night) -->
+      <g class="flies" fill="var(--celest)">
+        <circle class="fly" cx="300" cy="260" r="3"/><circle class="fly f2" cx="560" cy="246" r="2.6"/><circle class="fly f3" cx="700" cy="268" r="3"/><circle class="fly f4" cx="120" cy="254" r="2.4"/>
+      </g>
+
+      <!-- front hill (matches the page background) -->
+      <path d="M0 330C150 306 320 312 470 326S760 340 900 318 970 312 1000 316V380H0Z" fill="var(--grass)"/>
+
+      <!-- flowers -->
+      <g>
+        <path d="M110 346v-22M880 340v-20M640 352v-18" stroke="var(--leaf-2)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="110" cy="320" r="8" fill="#ffc2d1"/><circle cx="110" cy="320" r="3" fill="#ffe08a"/>
+        <circle cx="880" cy="316" r="8" fill="#d9c9ff"/><circle cx="880" cy="316" r="3" fill="#ffe08a"/>
+        <circle cx="640" cy="330" r="7" fill="#ffd9a8"/><circle cx="640" cy="330" r="2.6" fill="#ffe08a"/>
+      </g>
+
+      <!-- Pip -->
+      <g class="pip">
+        <ellipse cx="716" cy="350" rx="17" ry="15" fill="#ffd966"/>
+        <path d="M699 349l-9 3 9 3z" fill="#ffab73"/>
+        <circle cx="708" cy="346" r="2.3" fill="#3b2a2a"/>
+        <path d="M714 335q-1-8 4-10M719 336q3-7 8-7" stroke="#ffd966" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </g>
+    </svg>
+
+    <div class="hero-inner">
+      <button type="button" class="sky-chip" id="skyBtn" aria-label="Sky follows Philippine time. Press to preview other times of day.">
+        <svg class="ic" aria-hidden="true"><use href="#i-sunrise" id="skyIcon"/></svg>
+        <span id="skyText">Philippine time</span>
+      </button>
+
+      <div class="title-block">
+        <p class="eyebrow">your tiny planner</p>
+        <h1>Mochi's Meadow</h1>
+      </div>
+
+      <div class="mochi-wrap">
+        <div class="mochi" id="mochi" data-mood="sleepy" role="img" aria-label="Mochi, a pink blob with a leaf sprout. Click to say hi.">
+          <svg viewBox="0 0 120 110" width="124" height="114" aria-hidden="true">
+            <ellipse class="shadow" cx="60" cy="102" rx="34" ry="5"/>
+            <path class="body" d="M16 70c0-28 19-50 44-50s44 22 44 50c0 18-15 30-44 30S16 88 16 70z"/>
+            <path class="shade" d="M20 78c4 14 18 22 40 22s36-8 40-22c-8 8-22 12-40 12S28 86 20 78z"/>
+            <ellipse class="shine" cx="38" cy="46" rx="8" ry="5" transform="rotate(-30 38 46)"/>
+            <path class="sprout" d="M60 21c-2-9 3-15 11-16-1 8-4 13-11 16z"/>
+            <ellipse class="eye" id="eyeL" cx="44" cy="66" rx="5" ry="6.5"/>
+            <ellipse class="eye" id="eyeR" cx="76" cy="66" rx="5" ry="6.5"/>
+            <circle class="blush" cx="33" cy="77" r="6"/>
+            <circle class="blush" cx="87" cy="77" r="6"/>
+            <path class="mouth" id="mouth" d="M56 80h8"/>
+          </svg>
+        </div>
+        <p class="bubble" id="bubble" aria-live="polite">zzz… tuck something in?</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <section class="stats" aria-label="Your numbers">
+      <div class="stat" style="--chip: #ffe0c2; --chip-fg: #c2641f"><span class="stat-ic"><svg class="ic"><use href="#i-flame"/></svg></span><b id="statStreak">0</b><span class="stat-label">day streak</span></div>
+      <div class="stat" style="--chip: #cdf0dc; --chip-fg: #23814f"><span class="stat-ic"><svg class="ic"><use href="#i-check"/></svg></span><b id="statToday">0</b><span class="stat-label">done today</span></div>
+      <div class="stat" style="--chip: #ffd9e1; --chip-fg: #c2456a"><span class="stat-ic"><svg class="ic"><use href="#i-bell"/></svg></span><b id="statOverdue">0</b><span class="stat-label">overdue</span></div>
+      <div class="stat" style="--chip: #cfe6fb; --chip-fg: #2d6aa8"><span class="stat-ic"><svg class="ic"><use href="#i-hourglass"/></svg></span><b id="statFocus">0</b><span class="stat-label">focus minutes</span></div>
+    </section>
+
+    <div class="layout">
+
+      <div class="col col-left">
+
+        <section class="sheet folders-sheet" aria-label="Months of the year">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #ffe2c4; --chip-fg: #b8651f"><svg class="ic"><use href="#i-folder"/></svg></span><h2>Your year <span class="muted" id="yearLabel">2026</span></h2></header>
+          <div class="folders" id="folders" role="list"></div>
+        </section>
+
+        <section class="sheet cal-sheet" aria-label="Calendar">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #e2d8ff; --chip-fg: #6244b3"><svg class="ic"><use href="#i-calendar"/></svg></span><h2>Calendar</h2>
+            <button type="button" class="chip-btn push" id="goToday">Today</button></header>
+          <div class="cal-nav">
+            <button type="button" class="icon-btn" id="prevMonth" aria-label="Previous month"><svg class="ic"><use href="#i-left"/></svg></button>
+            <h3 id="monthTitle">November 2026</h3>
+            <button type="button" class="icon-btn" id="nextMonth" aria-label="Next month"><svg class="ic"><use href="#i-right"/></svg></button>
+          </div>
+          <div class="dow" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+          <div class="days" id="days"></div>
+          <p class="legend"><span>Colored dots show what's due</span><span class="dotkey"><i></i> overdue</span><span class="selkey"><i></i> picked day</span></p>
+        </section>
+
+        <section class="sheet week-sheet" aria-label="This week">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #cdf0dc; --chip-fg: #23814f"><svg class="ic"><use href="#i-chart"/></svg></span><h2>This week</h2></header>
+          <div class="week" id="week"></div>
+        </section>
+
+        <section class="sheet up-sheet" aria-label="Coming up">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #cfe6fb; --chip-fg: #2d6aa8"><svg class="ic"><use href="#i-clock"/></svg></span><h2>Coming up</h2></header>
+          <ul class="ups" id="ups"></ul>
+          <p class="soft-empty" id="upsEmpty" hidden>Nothing scheduled ahead. Plan something cozy!</p>
+        </section>
+
+        <section class="sheet mix-sheet" aria-label="Task balance">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #ffeaa3; --chip-fg: #9a7200"><svg class="ic"><use href="#i-sparkle"/></svg></span><h2>Your balance</h2></header>
+          <div class="prog">
+            <div class="prog-top"><b id="progText">0 of 0 done</b><span id="progPct">0%</span></div>
+            <div class="prog-track"><i id="progBar"></i></div>
+          </div>
+          <p class="mix-title">Still to do, by category</p>
+          <div class="mix" id="mix"></div>
+        </section>
+      </div>
+
+      <div class="col col-right">
+
+        <section class="sheet composer-sheet" aria-label="Add a task">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #ffeaa3; --chip-fg: #9a7200"><svg class="ic"><use href="#i-plus"/></svg></span><h2 id="composerTitle">New task</h2></header>
+          <form class="composer" id="taskForm" autocomplete="off">
+            <div class="input-row">
+              <label class="sr-only" for="taskInput">Task</label>
+              <input type="text" id="taskInput" placeholder="What needs tucking in?" maxlength="80">
+              <button type="submit" class="btn-main" id="addButton"><span id="addLabel">Add</span></button>
+            </div>
+
+            <div class="field">
+              <label for="dueInput">Due date</label>
+              <div class="row">
+                <input type="date" id="dueInput" class="date">
+                <div class="quick" role="group" aria-label="Quick dates">
+                  <button type="button" class="chip-btn" data-quick="0">Today</button>
+                  <button type="button" class="chip-btn" data-quick="1">Tomorrow</button>
+                  <button type="button" class="chip-btn" data-quick="7">Next week</button>
+                  <button type="button" class="chip-btn" data-quick="none">No date</button>
+                </div>
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend>Category</legend>
+              <div class="cats" id="catPicker"></div>
+            </fieldset>
+
+            <div class="row split">
+              <fieldset class="field">
+                <legend>How pressing?</legend>
+                <div class="pris" id="priPicker">
+                  <label><input type="radio" name="pri" value="1"><span><b class="meter" data-n="1"><i></i><i></i><i></i></b>Chill</span></label>
+                  <label><input type="radio" name="pri" value="2" checked><span><b class="meter" data-n="2"><i></i><i></i><i></i></b>Soon</span></label>
+                  <label><input type="radio" name="pri" value="3"><span><b class="meter" data-n="3"><i></i><i></i><i></i></b>Urgent</span></label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="repeatInput">Repeat</label>
+                <select id="repeatInput">
+                  <option value="none">Never</option>
+                  <option value="daily">Every day</option>
+                  <option value="weekly">Every week</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="link-btn" id="cancelEdit" hidden>Cancel editing</button>
+          </form>
+        </section>
+
+        <section class="sheet tasks-sheet" aria-label="Tasks">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #ffd9e1; --chip-fg: #c2456a"><svg class="ic"><use href="#i-list"/></svg></span><h2>To-do pile</h2></header>
+
+          <nav class="tabs" id="tabs" role="tablist" aria-label="Show tasks">
+            <span class="pill" id="pill" aria-hidden="true"></span>
+            <button role="tab" class="tabbtn is-active" data-tab="today" aria-selected="true">Today <em id="cToday">0</em></button>
+            <button role="tab" class="tabbtn" data-tab="upcoming" aria-selected="false">Soon <em id="cUp">0</em></button>
+            <button role="tab" class="tabbtn" data-tab="all" aria-selected="false">All <em id="cAll">0</em></button>
+            <button role="tab" class="tabbtn" data-tab="done" aria-selected="false">Done <em id="cDone">0</em></button>
+          </nav>
+
+          <div class="filter-row">
+            <div class="catfilter" id="catFilter" role="group" aria-label="Filter by category"></div>
+            <label class="sort"><span class="sr-only">Sort by</span>
+              <select id="sortInput">
+                <option value="date">By date</option>
+                <option value="priority">By pressing</option>
+              </select>
+            </label>
+          </div>
+
+          <p class="day-pill" id="dayPill" hidden>
+            <span id="dayPillText"></span>
+            <button type="button" id="clearDay" aria-label="Show all days"><svg class="ic"><use href="#i-x"/></svg></button>
+          </p>
+
+          <ul class="list" id="taskList"></ul>
+
+          <p class="empty" id="empty" hidden>
+            <span class="empty-ic"><svg class="ic"><use href="#i-sprout"/></svg></span>
+            <span id="emptyText"></span>
+          </p>
+
+          <div class="list-foot">
+            <button type="button" class="link-btn" id="clearExamples" hidden>Remove the example tasks</button>
+            <button type="button" class="link-btn" id="clearDone" hidden>Sweep away done tasks</button>
+          </div>
+        </section>
+
+        <section class="sheet focus-sheet" aria-label="Focus timer">
+          <header class="sheet-head"><span class="head-ic" style="--chip: #cfe6fb; --chip-fg: #2d6aa8"><svg class="ic"><use href="#i-timer"/></svg></span><h2>Focus nook</h2></header>
+          <div class="focus">
+            <div class="ring-wrap">
+              <svg viewBox="0 0 120 120" class="ring" aria-hidden="true">
+                <circle class="ring-track" cx="60" cy="60" r="52"/>
+                <circle class="ring-bar" id="ringBar" cx="60" cy="60" r="52"/>
+              </svg>
+              <div class="ring-text">
+                <b id="timeText">25:00</b>
+                <span id="modeText">focus</span>
+              </div>
+            </div>
+            <div class="focus-side">
+              <div class="field">
+                <label for="focusTask">Studying with Mochi</label>
+                <select id="focusTask"></select>
+              </div>
+              <div class="field">
+                <label for="focusLen">Session length</label>
+                <select id="focusLen">
+                  <option value="15">15 min</option>
+                  <option value="25" selected>25 min</option>
+                  <option value="45">45 min</option>
+                </select>
+              </div>
+              <div class="focus-btns">
+                <button type="button" class="btn-main" id="focusGo">Start</button>
+                <button type="button" class="btn-soft" id="focusReset">Reset</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="ground">
+    <div class="ground-row"><svg class="ic" aria-hidden="true"><use href="#i-flower"/></svg><p>Made for tiny wins.</p></div>
+    <p class="save-note" id="saveNote" role="status">Your tasks save automatically in this browser.</p>
+    <div class="ground-btns">
+      <button type="button" class="link-btn" id="exportBtn">Export backup</button>
+      <button type="button" class="link-btn" id="importBtn">Import backup</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+    </div>
+  </footer>
+
+  <dialog class="dlg" id="dayDialog" aria-labelledby="dlgTitle">
+    <div class="dlg-card">
+      <header class="dlg-head">
+        <div>
+          <p class="dlg-kicker" id="dlgKicker"></p>
+          <h2 id="dlgTitle"></h2>
+          <p class="dlg-sum" id="dlgSum"></p>
+        </div>
+        <button type="button" class="icon-btn" id="dlgClose" aria-label="Close"><svg class="ic"><use href="#i-x"/></svg></button>
+      </header>
+      <div class="prog-track"><i id="dlgBar"></i></div>
+      <ul class="list dlg-list" id="dlgList"></ul>
+      <p class="soft-empty" id="dlgEmpty" hidden></p>
+      <form class="dlg-add" id="dlgForm" autocomplete="off">
+        <label class="sr-only" for="dlgInput">Add a task to this day</label>
+        <input type="text" id="dlgInput" placeholder="Add something to this day" maxlength="80">
+        <button type="submit" class="btn-main">Add</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
